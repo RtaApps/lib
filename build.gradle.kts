@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 }
 
-group = "cat.moki.jizhang.lib"
+group = "cat.moki.jizhang"
 version = "1.0-SNAPSHOT"
 
 repositories {
