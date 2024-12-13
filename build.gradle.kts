@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 }
 
-group = "cat.moki.jizhang.lib"
+group = "cat.moki.jizhang"
 version = "1"
 
 repositories {
@@ -24,11 +24,6 @@ kotlin {
 publishing {
     publications {
         create<MavenPublication>("release") {
-
-            afterEvaluate {
-                from(components["release"])
-            }
-
             groupId = "cat.moki.jizhang"
             artifactId = "lib"
             version = "1" // Ensure this matches your versioning
