@@ -20,14 +20,3 @@ tasks.test {
 kotlin {
     jvmToolchain(21)
 }
-
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            groupId = "cat.moki.jizhang"
-            artifactId = "lib"
-            version = "1" // Ensure this matches your versioning
-            afterEvaluate { artifact(tasks.getByName("release"))}
-        }
-    }
-}
