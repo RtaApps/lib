@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "cat.moki.jizhang.lib"
-version = "1.0-SNAPSHOT"
+version = "1"
 
 repositories {
     mavenCentral()
@@ -19,4 +19,20 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(21)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+
+            afterEvaluate {
+                from(components["release"])
+            }
+
+            groupId = "cat.moki.jizhang"
+            artifactId = "lib"
+            version = "1" // Ensure this matches your versioning
+
+        }
+    }
 }
