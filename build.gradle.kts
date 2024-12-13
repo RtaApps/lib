@@ -4,10 +4,10 @@ plugins {
 }
 
 group = "cat.moki.jizhang"
-version = "1"
 
 repositories {
     mavenCentral()
+
 }
 
 dependencies {
