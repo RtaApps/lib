@@ -27,7 +27,7 @@ publishing {
             groupId = "cat.moki.jizhang"
             artifactId = "lib"
             version = "1" // Ensure this matches your versioning
-
+            afterEvaluate { artifact(tasks.getByName("release"))}
         }
     }
 }
