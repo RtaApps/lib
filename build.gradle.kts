@@ -25,13 +25,10 @@ publishing {
     publications {
         create<MavenPublication>("release") {
 
-            afterEvaluate {
-                from(components["release"])
-            }
-
             groupId = "cat.moki.jizhang"
             artifactId = "lib"
             version = "1.0-SNAPSHOT" // Ensure this matches your versioning
+            from(components["release"])
 
         }
     }
