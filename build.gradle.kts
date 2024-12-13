@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.0.0"
 }
 
-group = "cat.moki.jizhang"
+group = "cat.moki.jizhang.lib"
 version = "1.0-SNAPSHOT"
 
 repositories {
