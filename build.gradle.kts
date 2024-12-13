@@ -23,12 +23,11 @@ kotlin {
 
 publishing {
     publications {
-        create<MavenPublication>("Maven") {
+        register<MavenPublication>("release") {
 
             groupId = "cat.moki.jizhang"
             artifactId = "lib"
             version = "1.0-SNAPSHOT" // Ensure this matches your versioning
-            from(components["java"])
 
         }
     }
